@@ -22,9 +22,19 @@ class Program
                 
                 while (userNumber2 != 8)
                 {
-                    Console.Write("Begin writing");
+                    Console.Write("Enter second number: ");
                     string userInput2 = Console.ReadLine();
                     userNumber2 = int.Parse(userInput2);
+
+                    if (userNumber2 == 6)
+                    {
+                        //select prompt
+                    }
+                    
+                    else if (userNumber2 == 7)
+                    {
+                       Console.WriteLine("Begin writing"); 
+                    }
                 }
 
                
