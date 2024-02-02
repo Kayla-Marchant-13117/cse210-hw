@@ -18,7 +18,7 @@ class Program
             
             if (userNumber == 1)
             {
-                Console.WriteLine ("6. Recieve prompt 7. No prompt 8. Menu");
+                Console.WriteLine("6. Recieve prompt 7. No prompt 8. Menu");
                 
                 while (userNumber2 != 8)
                 {
@@ -28,12 +28,14 @@ class Program
 
                     if (userNumber2 == 6)
                     {
-                        //select prompt
+                       Prompts prompt = new Prompts();
+                       string currentPrompt = prompt.RandomPrompts();
+                       Console.WriteLine(currentPrompt);
                     }
                     
                     else if (userNumber2 == 7)
                     {
-                       Console.WriteLine("Begin writing"); 
+                       //Entries(); 
                     }
                 }
 
