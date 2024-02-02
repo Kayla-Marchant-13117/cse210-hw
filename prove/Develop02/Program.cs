@@ -9,6 +9,8 @@ class Program
         Console.WriteLine ("1. Write 2. Display 3. Save 4. Load 5. Quit");
         int userNumber = -1;
         int userNumber2 = -1;
+        string _currentPrompt = "";
+        string _promptAnswer = "";
 
         while (userNumber != 5)
         {
@@ -29,8 +31,9 @@ class Program
                     if (userNumber2 == 6)
                     {
                        Prompts prompt = new Prompts();
-                       string currentPrompt = prompt.RandomPrompts();
-                       Console.WriteLine(currentPrompt);
+                       _currentPrompt = prompt.RandomPrompts();
+                       Console.Write(_currentPrompt);
+                       _promptAnswer = Console.ReadLine();
                     }
                     
                     else if (userNumber2 == 7)
@@ -45,7 +48,7 @@ class Program
 
             else if (userNumber == 2)
             {
-                Console.WriteLine("Display journal entries");
+                Console.WriteLine($"{_currentPrompt}{_promptAnswer}");
                 
             }
 
